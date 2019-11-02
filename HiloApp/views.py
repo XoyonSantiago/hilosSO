@@ -5,7 +5,7 @@ import threading
 # Create your views here.
 datos = []
 
-class hola:
+class hilo:
     # metodo aceptar personas ----------Hilo1
     def personass(personas):
         for person in personas:
@@ -41,9 +41,9 @@ def index(request):
     lista = ['Alexis', 'Juan', 'Santiago', 'Hans', 'David']
     departamentos = ['Chimaltenango', 'Comalapa', 'Chimaltenago', 'Chimaltenango', 'Comalapa']
     # --------------------Creando Hilos Para las Personas, sus Id's y departamento----------
-    t1 = threading.Thread(target=hola.personass, args=(lista,))
-    t2 = threading.Thread(target=hola.asiganarleId, args=(lista,))
-    t3 = threading.Thread(target=hola.asignarDepartamento, args=(lista, departamentos))
+    t1 = threading.Thread(target=hilo.personass, args=(lista,))
+    t2 = threading.Thread(target=hilo.asiganarleId, args=(lista,))
+    t3 = threading.Thread(target=hilo.asignarDepartamento, args=(lista, departamentos))
     # --------------------Iniciamos Los Hilos-----------------------------------------------
     t1.start()
     t2.start()
