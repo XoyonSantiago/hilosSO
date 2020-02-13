@@ -38,7 +38,7 @@ class hilo:
 def index(request):
     t = time.time()
     datos.clear()  # limpiamos los dato[]
-    lista = ['Alexis', 'Juan', 'Santiago', 'Hans', 'David']
+    lista = ['Haroldo', 'Edy', 'Santiago', 'Melissa', 'Alejandro']
     departamentos = ['Chimaltenango', 'Comalapa', 'Chimaltenago', 'Chimaltenango', 'Comalapa']
     # --------------------Creando Hilos Para las Personas, sus Id's y departamento----------
     t1 = threading.Thread(target=hilo.personass, args=(lista,))
